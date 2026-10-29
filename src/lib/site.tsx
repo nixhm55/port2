@@ -13,7 +13,7 @@ export interface SiteSettings {
 
 export type ThemeMode = 'auto' | Theme;
 
-const STORAGE_KEY = 'yasmi:site:v2';
+const STORAGE_KEY = 'Nisam:site:v2';
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   name: portfolioData.identity.name,

@@ -1,4 +1,4 @@
-# Yasmi, portfolio
+# Nisam, portfolio
 
 A minimal, editorial, multi-page portfolio with one persistent 3D sculpture.
 React, TypeScript, Vite, React Three Fiber, Framer Motion. No router library: a small
@@ -32,7 +32,7 @@ Unknown paths and unknown slugs show a not-found page. Deep links and refreshes 
 Everything a visitor reads is in `src/data/portfolioData.ts`. Anything marked
 `placeholder: true`, and every project or note marked `sample: true`, is a stand-in and is
 labelled as such on screen (dotted underline, or a "Sample" tag). Nothing in the file is a
-claim about Yasmi. Delete the markers as you replace the text.
+claim about Nisam. Delete the markers as you replace the text.
 
 - A project's `image` (`{ src, alt }`) replaces its generated visual. Put files in `public/`.
 - `about.portrait` does the same for the portrait.

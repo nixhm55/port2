@@ -1,7 +1,7 @@
 /**
  * Content for the whole site. Everything a visitor reads lives here.
  *
- * Nothing in this file is a statement of fact about Yasmi. Entries marked
+ * Nothing in this file is a statement of fact about Nisam. Entries marked
  * `placeholder: true` (or belonging to a project/essay marked `sample: true`)
  * are stand-ins; the interface labels them as such until they are replaced.
  */
@@ -97,11 +97,11 @@ export interface SocialLink {
 
 export const portfolioData = {
   identity: {
-    name: 'Yasmi',
+    name: 'Nisam',
     edition: 'Portfolio, 2026',
     statement: 'A quiet place for selected work and notes.',
     intro:
-      'This portfolio is a working draft. Every project, note and personal detail is placeholder content, ready to be replaced with Yasmi’s own.',
+      'This portfolio is a working draft. Every project, note and personal detail is placeholder content, ready to be replaced with Nisam’s own.',
     location: { value: 'City, Country', placeholder: true } as Field,
     availability: { value: 'Availability to be added', placeholder: true } as Field,
     email: 'hello@example.com',
@@ -119,7 +119,7 @@ export const portfolioData = {
 
   about: {
     headingLines: ['Work that', 'takes its', 'time.'],
-    lead: 'Yasmi is the person behind this portfolio. Replace this paragraph with a short introduction: who you are, what you make, and what you care about.',
+    lead: 'Nisam is the person behind this portfolio. Replace this paragraph with a short introduction: who you are, what you make, and what you care about.',
     body: [
       'Use this second paragraph for the longer version. A few honest sentences about how you work and what a good collaboration looks like are enough.',
       'Everything on this page is placeholder text. Edit it in src/data/portfolioData.ts, or try changes live with the editor in the header.'
@@ -153,7 +153,7 @@ export const portfolioData = {
 
   projects: {
     heading: 'Selected work',
-    note: 'Three demonstration projects. They show how an entry is laid out and are not Yasmi’s real work. Replace them in the data file.',
+    note: 'Three demonstration projects. They show how an entry is laid out and are not Nisam’s real work. Replace them in the data file.',
     items: [
       {
         id: 'ledger',
