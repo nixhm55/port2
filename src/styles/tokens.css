@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Design tokens. Everything visual is derived from these.
+   Two surfaces share one system: ivory (default) and charcoal.
+   ========================================================================== */
+
+/* Registered so a surface change cross-fades instead of snapping. */
+@property --bg { syntax: '<color>'; inherits: true; initial-value: #f1eee7; }
+@property --fg { syntax: '<color>'; inherits: true; initial-value: #161614; }
+@property --fg-2 { syntax: '<color>'; inherits: true; initial-value: #4b4a46; }
+@property --fg-3 { syntax: '<color>'; inherits: true; initial-value: #6b6964; }
+@property --panel { syntax: '<color>'; inherits: true; initial-value: #e6e2d8; }
+@property --rule { syntax: '<color>'; inherits: true; initial-value: rgba(22, 22, 20, 0.16); }
+@property --rule-strong { syntax: '<color>'; inherits: true; initial-value: rgba(22, 22, 20, 0.42); }
+
+:root {
+  /* Type */
+  --font-display: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-sans: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --step--2: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.55rem);
+  --step-2: clamp(1.5rem, 1.25rem + 1.1vw, 2.3rem);
+  --step-3: clamp(2rem, 1.5rem + 2.2vw, 3.6rem);
+
+  /* Space and grid */
+  --gutter: clamp(1.25rem, 3.2vw, 3.25rem);
+  --col-gap: clamp(0.75rem, 1.6vw, 1.75rem);
+  --max-width: 1760px;
+  --header-h: 4.5rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: clamp(5rem, 11vw, 9.5rem);
+
+  /* Motion (mirrored in src/lib/motion.ts) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-micro: 200ms;
+  --dur-ui: 400ms;
+  --dur-reveal: 900ms;
+
+  /* Layers */
+  --z-stage: 0;
+  --z-content: 1;
+  --z-menu: 55;
+  --z-header: 60;
+  --z-flight: 70;
+  --z-veil: 80;
+  --z-cursor: 90;
+  --z-editor: 100;
+
+  /* Surface: ivory */
+  --bg: #f1eee7;
+  --fg: #161614;
+  --fg-2: #4b4a46;
+  --fg-3: #6b6964;
+  --panel: #e6e2d8;
+  --rule: rgba(22, 22, 20, 0.16);
+  --rule-strong: rgba(22, 22, 20, 0.42);
+  color-scheme: light;
+}
+
+:root[data-theme='charcoal'] {
+  --bg: #151513;
+  --fg: #efebe2;
+  --fg-2: #c0bcb0;
+  --fg-3: #9a968b;
+  --panel: #1f1f1c;
+  --rule: rgba(239, 235, 226, 0.17);
+  --rule-strong: rgba(239, 235, 226, 0.45);
+  color-scheme: dark;
+}
+
+:root {
+  transition:
+    --bg 0.9s var(--ease-in-out),
+    --fg 0.9s var(--ease-in-out),
+    --fg-2 0.9s var(--ease-in-out),
+    --fg-3 0.9s var(--ease-in-out),
+    --panel 0.9s var(--ease-in-out),
+    --rule 0.9s var(--ease-in-out),
+    --rule-strong 0.9s var(--ease-in-out);
+}
